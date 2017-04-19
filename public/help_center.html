@@ -1,18 +1,44 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" ng-app="eLearningApp">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
 <title>E-Learning</title>
+
+
+
 <link rel="stylesheet" href="css/bootstrap.min.css">
+
 <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
 <link href="css/font-awesome.min.css" rel="stylesheet">
+
 <link rel="stylesheet" href="css/style.css">
+
 <link rel="stylesheet" href="css/responsive-tabs.css">
+
 <link rel="stylesheet" href="css/owl.carousel.min.css">
+
 <link rel="stylesheet" href="css/owl.theme.min.css">
+
+
+
+
+
 </head>
-<body ng-controller="Quesctrl">
+
+
+
+<body>
 
 <div class="wrapper">
 
@@ -66,7 +92,7 @@
 
                     <div class="login">
 
-                        <span><a href="#">Login</a></span>
+                        <span><a href="#" data-toggle="modal" data-target="#myModal">Login</a></span>
 
                         <span class="line">|</span>
 
@@ -218,233 +244,135 @@
 
 </section> 
 
+
+
+<!---analytics section--->
+
+
+
+
+
+
 <section>
 
 	<div class="row">
 
-        <div class="qstn-title">
+    	<div class="join-e-learning">
 
         	<div class="container">
 
-            	<div class="col-md-3">
-                   
-            		<div class="class-name">{{classDetails.caption}}</div>
+            	<div class="col-md-6 col-sm-6 join-e">
+                        <div class="col-md-12">   
+                             <h3>Your account</h3>
+						<a>What do I do if I forget my password?</a><br>
+						<a>What are the technical requirements for E-learning?</a><br>
+						<a>What should I do if I forget my username?</a><br>
+						<a>How do I change my password?</a><br>
+						<a>How do I get an account for the iPad, Android or Kindle app?</a><br>
+						<a href="#" class="join-ebtn">View all</a>    
+                       </div>      
+                 </div>      
+                  
 
-                </div>
+               
 
-                <div class="col-md-9">
+                  <div class="col-md-6 col-sm-6 join-e">
+                      <div class="col-md-12">  
+                             <h3>Practice & awards</h3>
+							<a>How can I find a skill to practise?</a><br>
+							<a>How does the SmartScore work?</a><br>
+							<a>How do I earn awards and certificates?</a><br>
+							<a>Can my children practise any class level?</a><br>
+							<a>Is there audio available for younger students?</a><br>
+                             <a href="#" class="join-ebtn">View all</a>   
+                      </div>      
 
-            		<div class="qstn-type">A.1 Name the shape</div>
+                 </div>
+				 
+             </div>
+			 
+			 
+			 
+			 <div class="container">
 
-                </div>
+            	<div class="col-md-6 col-sm-6 join-e">
+                        <div class="col-md-12">   
+                             <h3>E-Learning Analytics & curriculum</h3>
+						<a>How can I find an E-Learning Analytics report that best suits my needs?</a><br>
+						<a>How do I print an E-Learning Analytics report?</a><br>
+						<a>How can I be sure E-Learning Analytics reflects my most recent data?</a><br>
+						<a>Why is there more than one set of objectives for my country?</a><br>
+						<a>How do I get an account for the iPad, Android or Kindle app?</a><br>
+						
+						
+						<a href="#" class="join-ebtn">View all</a>    
+                       </div>      
+                 </div>      
+                  
 
-            </div>
+               
 
-        </div>
+                  <div class="col-md-6 col-sm-6 join-e">
+                      <div class="col-md-12">  
+					  
+                             <h3>Family memberships</h3>
+							<a>Do the children in my membership receive access to all classes?</a><br>
+							<a>How do I add a child to my membership?</a><br>
+							<a>Does membership include all of my children or do I need to purchase multiple memberships?</a><br>
+							<a>What subjects can I purchase on E-Learning?</a><br>
+							<a>How do I cancel my membership?</a><br>
+                             <a href="#" class="join-ebtn">View all</a>   
+                      </div>      
 
-    </div>
-
-    <div class="row">
-
-    	<div class="container">
-
-            <div class="col-md-12 question-section">
-
-           		<div class="qstn">
-
-                	<div class="col-md-12">
-
-                        <div class="audio">
-
-                            <i class="fa fa-volume-up"></i>
-
-                        </div>
-
-                        <div class="qstn-text">
-
-                            What shape is this?
-
-                        </div>
-
-                    </div>
-
-                    <div class="qstn-img col-md-6">
-
-                    	<img src="images/circle.png" />
-
-                    </div>
-
-                    <div class="qstn-controls col-md-6">
-
-                    	<div class="qstn-controls-inner">
-
-                            <div class="audio">
-
-                                <i class="fa fa-volume-up"></i>
-
-                            </div>
-
-                            <div data-toggle="buttons" class="col-md-10 options">
-
-                                  <label class="btn btn-answer">
-
-                                    <input type="radio" name="options" id="option1"> Circle
-
-                                  </label>
-
-                                  <label class="btn btn-answer wrong">
-
-                                    <input type="radio" name="options" id="option2"> Square
-
-                                  </label>
-
-                            </div>
-
-                            <div class="col-md-12">
-
-                            	<a href="correct_answer.html" class="btn submit-btn">Submit</a>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                
-
-            </div>
+                 </div>
+				 
+             </div>
 
         </div>
 
-        
-
-    </div>
-
-  
-
-    <div class="wrong-answer">
-
-           <div class="col-md-12">
-
-                <button class="btn submit-btn close-answer">Got It</button>
-
-                <span class="close-btn close-answer"><i class="fa fa-close"></i></span>
-
-                <h2>Sorry, Incorrect...</h2>
-
-                <div class="col-md-12">
-
-                    <div class="audio">
-
-                        <i class="fa fa-volume-up"></i>
-
-                    </div>
-
-                    <div class="qstn-text">
-
-                        The correct answer is:
-
-                    </div>
-
-                </div>
-
-                <img src="images/circle.png" /> 
-
-           </div>
-
-           <div class="review">Review</div>
-
-           <div class="col-md-12">
-
-           		<div class="col-md-12">
-
-                    <div class="audio">
-
-                        <i class="fa fa-volume-up"></i>
-
-                    </div>
-
-                    <div class="qstn-text">
-
-                        What shape is this?
-
-                    </div>
-
-                </div>
-
-                <img src="images/circle.png" /> 
-
-                <div class="col-md-12 d-inline-block">
-
-                    <div class="audio">
-
-                        <i class="fa fa-volume-up"></i>
-
-                    </div>
-
-                    <div data-toggle="buttons" class="col-md-10 options">
-
-                          <label class="btn btn-answer-confirm">
-
-                            <input type="radio" name="options" id="option1"> Circle
-
-                          </label>
-
-                          <label class="btn btn-answer-confirm focus">
-
-                            <input type="radio" name="options" id="option2"> Square
-
-                          </label>
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-12">
-
-                    <h3 class="color-dark-grey">Your answer is:</h3>
-
-                    <h2 class="color-dark-grey">Square</h2>
-
-                </div>
-
-           </div>
-
-           <div class="solve">Solve</div>
-
-           <div class="col-md-12">
-
-                <div class="qstn-text">
-
-                    The shape has no coners. It is a circle
-
-                </div>
-
-                <img src="images/circle.png" />
-
-           </div>
-
-       </div>
-
-       
-
-    </div>
+     </div>
+	 
+	
 
 </section>
 
 
 
-    <!--Banner--> 
+
+<!-------------------------------------------------@@@@@@@@@@@@@@@@@@@@@@@@----------------------------------------------------------------->
 
 
+<section>
 
- <!--Home Content-->
+	<div class="row">
 
+    	<div class="editions">
 
+        	<div class="container">
 
+                <div class="col-md-2">
 
+                    <h3>Editions</h3>
+
+                </div>
+
+                <div class="col-md-10 edition-flags">
+
+                    <img src="images/flag1.png" />
+
+                    <img src="images/uk.png" />
+
+                    
+
+                </div>
+
+             </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 
 
@@ -544,82 +472,16 @@
 
 </div>
 
+<script src="js/jquery.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/responsiveTabs.min.js"></script>
+
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 
 
-<div class="score">
 
-	<div class="score-border"></div>
-
-    <div class="score-content">
-
-    	<div class="col-md-12">
-
-        	<div class="col-md-3 col-xs-6 answered">
-
-            	<h6 class="resp">Questions Answered</h6>
-
-                <h3>22</h3>
-
-            </div>
-
-            <div class="col-md-3 col-xs-6 time">
-
-            	<h6>Time Elapsed</h6>
-
-                <div class="col-xs-4">
-
-                	<h6>HH</h6>
-
-                    00
-
-                </div>
-
-                <div class="col-xs-4">
-
-                	<h6>MIN</h6>
-
-                    12
-
-                </div>
-
-                <div class="col-xs-4">
-
-                	<h6>SEC</h6>
-
-                    22
-
-                </div>
-
-                
-
-            </div>
-
-            <div class="col-md-3 col-xs-6 tot-score">
-
-            	<h6>Smartscore Out Of 100</h6>
-
-                <h3>22</h3>
-
-            </div>
-
-            <div class="col-md-3 col-xs-6 reward">
-
-            	<h6>Rewards</h6>
-
-                <img src="images/reward1.png" />
-
-                <img src="images/reward2.png" />
-
-                <img src="images/reward3.png" />
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-<link rel="import" href="footer.html">
  <script>
 
 $(document).ready(function(){
@@ -682,53 +544,34 @@ jQuery(document).ready(function() {
 
 </script>
 
-<script>
-
-$(".wrong,.close-answer").click(function () {
-
-	/*var height=$('.wrong-answer').height();
-
-	$('body').css('height', height);*/
-
-    // Set the effect type
-
-    var effect = 'slide';
-
-
-
-    // Set the options for the effect type chosen
-
-    var options = { direction: 'right' };
-
-
-
-    // Set the duration (default: 400 milliseconds)
-
-    var duration = 500;
-
-
-
-    $('.wrong-answer').toggle(effect, options, duration);
-
-});
-
-
-
-$(document).ready(function(e) {
-
-		var sheight=$('.score').outerHeight();
-
-		var bheight=$(document).outerHeight();
-
-		var height=sheight+bheight;
-
-		$('body').css('height', height);
-
-
-
-});
-
-</script>
+<!--Login  Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog login-modal-bg" role="document">
+    <div class="modal-content login-modal-content">
+      <div class="modal-header">
+        <span class="close color-white login-close" data-dismiss="modal">Close X</span>
+        
+      </div>
+      <div class="modal-body login-content">
+        <h2>Welcome To E-learning</h2>
+        <h2>Login as</h2>
+        <div class="col-md-4">
+        	<img src="images/shreshta.png" />
+            <h4>Shreshta</h4>
+        </div>
+        <div class="col-md-4">
+        	<img src="images/parents.png" />
+            <h4>Parent</h4>
+        </div>
+        <div class="col-md-4">
+        	<img src="images/teacher.png" />
+            <h4>Teacher</h4>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
 
 </body>
 

@@ -118,6 +118,12 @@ eLearningApp.controller('Appctrl',function($scope, $rootScope, $http, $timeout, 
        }
     });
 	
+	$scope.getQuestionPage = function(classid,caption,description){
+		$scope.classDetails = {"classid" : classid, "caption": caption,"description":description};
+		$window.sessionStorage.setItem('classDetails', JSON.stringify($scope.classDetails));
+		$window.location.href = 'questionlist.html'; 
+    };
+	
 	//Handling toChangeCurrentPage event emited from signUp and offers controller
  	$scope.$on("toChangeCurrentPage", function(e, data) {
  		if(data == "HomePage") {

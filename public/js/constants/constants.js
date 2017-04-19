@@ -121,6 +121,8 @@ var Constants = (function() {
 		function URLConstants() {
 			this.USER_DashBoard    = HOSTNAME+"/userDashboard/auth";
 			this.Class_Info        = HOSTNAME+"/homePage/getClassInfo";
+			this.QuestionList_Info = HOSTNAME+"/homePage/getQuestionListInfo/{classid}";
+			this.QuestionDetails_Info = HOSTNAME+"/homePage/getQuestionDetailsInfo/{subCateId}";
 			this.RESTAURENT_SIGNIN = HOSTNAME+"/restaurant/auth";
 			this.RESTAURENT_SIGNUP = HOSTNAME+"/restaurant/register";
 			this.ADMIN_SIGNIN = HOSTNAME+"/starlly/auth";

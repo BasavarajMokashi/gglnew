@@ -26,7 +26,7 @@ module.exports = function(app) {
         next();
     });
      /************** API Routhing **************/
-    app.get('/userDashboard/auth', function(req, response) {
+    app.post('/userDashboard/auth', function(req, response) {
         try {
             userMgmt.auth(req, response);
         } catch (err) {
@@ -43,6 +43,34 @@ module.exports = function(app) {
    app.get('/homePage/getClassInfo', function(req, response) {
         try {
             homeInfo.getClassInfo(req, response);
+        } catch (err) {
+            logger.error(err.message);
+            response.writeHead(500, {
+                'Content-Type': 'application/json'
+            });
+            response.end(JSON.stringify({
+                "errorMessage": err.message
+            }));
+        }
+    });
+	
+	app.get('/homePage/getQuestionListInfo/:classid', function(req, response) {
+        try {
+            homeInfo.getQuestionListInfo(req, response);
+        } catch (err) {
+            logger.error(err.message);
+            response.writeHead(500, {
+                'Content-Type': 'application/json'
+            });
+            response.end(JSON.stringify({
+                "errorMessage": err.message
+            }));
+        }
+    });
+	
+	app.get('/homePage/getQuestionDetailsInfo/:subCateId', function(req, response) {
+        try {
+            homeInfo.getQuestionDetailsInfo(req, response);
         } catch (err) {
             logger.error(err.message);
             response.writeHead(500, {

@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="eLearningApp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Learning</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive-tabs.css">
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/owl.theme.min.css">
+</head>
+<body ng-controller="QuesListctrl">
+<div class="wrapper">
+<html>
+<h1>
+{{classDetails.caption}}
+</h1>
+<p>
+{{classDetails.description}}
+</p>
+<div ng-repeat="categoryList in categoryToFilter() | filter:filterTeams" >
+        <h2>{{categoryList.CategoryName}}</h2>
+
+<li ng-repeat="subcatList in quesListInfo | filter:{CategoryName: categoryList.CategoryName}">
+<a style="cursor:pointer" ng-click="getQuestionDetails(subcatList.SubCategoryId)">{{subcatList.SubCategoryName}}</a>
+</li>
+</div>
+</div>
+<link rel="import" href="footer.html">
+
+<script>
+
+$(document).ready(function(){
+
+    $("#testimonial-slider").owlCarousel({
+
+        items:1,
+
+        itemsDesktop:[1000,2],
+
+        itemsDesktopSmall:[980,1],
+
+        itemsTablet:[768,1],
+
+        pagination:true,
+
+        navigation:false,
+
+        navigationText:["",""],
+
+        autoPlay:true
+
+    });
+
+});
+
+</script>
+
+<script>
+
+$(document).ready(function() {
+
+	RESPONSIVEUI.responsiveTabs();
+
+})
+
+</script>
+
+
+
+
+
+<script>
+
+jQuery(document).ready(function() {
+
+    jQuery('.toggle-nav').click(function(e) {
+
+        jQuery(this).toggleClass('active');
+
+        jQuery('.menu ul').toggleClass('active');
+
+ 
+
+        e.preventDefault();
+
+    });
+
+});
+
+</script>
+
+<script>
+
+$(".wrong,.close-answer").click(function () {
+
+	/*var height=$('.wrong-answer').height();
+
+	$('body').css('height', height);*/
+
+    // Set the effect type
+
+    var effect = 'slide';
+
+
+
+    // Set the options for the effect type chosen
+
+    var options = { direction: 'right' };
+
+
+
+    // Set the duration (default: 400 milliseconds)
+
+    var duration = 500;
+
+
+
+    $('.wrong-answer').toggle(effect, options, duration);
+
+});
+
+
+
+$(document).ready(function(e) {
+
+		var sheight=$('.score').outerHeight();
+
+		var bheight=$(document).outerHeight();
+
+		var height=sheight+bheight;
+
+		$('body').css('height', height);
+
+
+
+});
+
+</script>
+
+</body>
+
+</html>
+
+
+

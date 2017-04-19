@@ -8,15 +8,15 @@ module.exports = {
 
     auth: function(req, response) {
 		try {
-            var username = req.headers['username'];
-            var upassword = req.headers['upassword'];
+            var username = req.body.username;
+            var upassword = req.body.password;
 			var UserStatus=1;
 		    if (username && upassword) {
                 try{ 
 				    var authQuery = "SELECT UserName, Password,LoginUserId from user WHERE UserName='"+username+"' AND Password='"+upassword+"' AND UserStatus="+UserStatus+"";
                    database.dbTransaction(req, response, authQuery, function(resultSet) {
 					    if (resultSet.length > 0) {
-						   return response.status(200).json(resultSet[0]);
+						   return response.status(200).json({"code": 200,"result":resultSet[0]});
                         } else {
                             return response.status(400).json({ "code": 400, "status": "Invalid Credientials!!" });
                         }

@@ -49,7 +49,7 @@
                     </nav>
                 
                     <div class="login">
-                        <span><a href="#">Login</a></span>
+                        <span><a href="#" data-toggle="modal" data-target="#myModal">Login</a></span>
                         <span class="line">|</span>
                         <span><a href="dashboard.html">Register</a></span>
                     </div>
@@ -199,7 +199,7 @@
                         data-speed="1200" 
                         data-start="1900" 
                         data-easing="easeOutBack" 
-                        style="line-height: 20px; color: rgb(255, 245, 104); font-family: baloopaaji; font-size: 28px;  ">Increase your potential and confident
+                        style="line-height: 20px; color: rgb(255, 245, 104); font-family: baloopaaji; font-size: 28px;  ">Increase your potential and confidence
                   </div>
    
 					<!-- LAYER NR. 4 -->   
@@ -208,7 +208,7 @@
                          data-y="125" 
                          data-speed="1300" 
                          data-start="2000" 
-                         style="border-radius: 8px; background: rgb(255, 245, 104) none repeat scroll 0% 0%; color: rgb(4, 63, 113); font-family: gotham; font-size: 21px; padding: 13px 18px; font-weight: bold;">BECOME MEMBER				</div></a>
+                         style="border-radius: 8px; background: rgb(255, 245, 104) none repeat scroll 0% 0%; color: rgb(4, 63, 113); font-family: gotham; font-size: 21px; padding: 13px 18px; font-weight: bold;">BECOME A MEMBER				</div></a>
 				</li>
 				<!-- SLIDE  -->
             </ul>
@@ -228,12 +228,12 @@
                             <p>questions answered <br />  and counting</p>
                         </div>
                         <div class="col-md-3 trust-edu">
-                       	 	<p>Trusted by over</p>
+                       	 	<p class="padding-top-10">Trusted by over</p>
                         	<h3> 250,000 </h3>
                         	<p>educators</p>
                         </div>
                         <div class="col-md-3 trust-edu">
-                        	<p>Used in more than</p>
+                        	<p class="padding-top-10">Used in more than</p>
                             <h3>10 countries</h3>
                         </div>
                 </div>
@@ -247,7 +247,7 @@
         	<div class="container">
             		<div class="col-md-12">	
                     		<div class="member-benefits-heading">
-                                    <h1 class="text-center main-heading">Become member today</h1>
+                                    <h1 class="text-center main-heading">Become A Member Today</h1>
                                     <h2 class="text-center sub-head">Explore the benefits of becoming an E-Learning member!</h2>
                             </div>
                             <div class="col-md-4">
@@ -474,5 +474,34 @@ jQuery(document).ready(function() {
 	});	//ready
 
 </script>
+<!--Login  Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog login-modal-bg" role="document">
+    <div class="modal-content login-modal-content">
+      <div class="modal-header">
+        <span class="close color-white login-close" data-dismiss="modal">Close X</span>
+        
+      </div>
+      <div class="modal-body login-content">
+        <h2>Welcome To E-learning</h2>
+        <h2>Login as</h2>
+        <div class="col-md-4">
+        	<img src="images/shreshta.png" />
+            <h4>Shreshta</h4>
+        </div>
+        <div class="col-md-4">
+        	<img src="images/parents.png" />
+            <h4>Parent</h4>
+        </div>
+        <div class="col-md-4">
+        	<img src="images/teacher.png" />
+            <h4>Teacher</h4>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
